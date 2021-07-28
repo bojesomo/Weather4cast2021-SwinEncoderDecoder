@@ -1,0 +1,279 @@
+args: !!python/object:argparse.Namespace
+  augment_data: true
+  batch_norm: false
+  batch_size: 1
+  beta_1: 0.9
+  beta_2: 0.999
+  bins_to_predict: 32
+  black_list_path: /home/farhanakram/PycharmProjects/HypercomplexNetwork/Weather4cast2021/code_base/blacklist.json
+  blk_type: swinencoder3d
+  checkpoint: ''
+  classifier_activation: sigmoid
+  collapse_time: false
+  control_params:
+    use_all_variables: false
+    use_cloud_type: false
+    use_static: false
+    use_time_slot: false
+  crop_in: null
+  crop_out: null
+  crop_static:
+    size: 256
+    x_start: 1850
+    y_start: 760
+  data_path: /home/farhanakram/Alabi/Datasets/Weather4cast2021/w4c-core-stage-1/R1
+  day_bins: 96
+  dense_type: D
+  depth: 4
+  dropout: 0.0
+  epochs: 100
+  epsilon: 1.0e-08
+  extra_data: ''
+  filename: ALL_real_swinencoder3d_688080
+  gpus: 0,1
+  growth_rate: 64
+  height: 256
+  hidden_activation: elu
+  in_channels: 4
+  inplace_activation: true
+  input_vars:
+  - temperature
+  - crr_intensity
+  - asii_turb_trop_prob
+  - cma
+  len_seq_in: 4
+  len_seq_out: 32
+  log_dir: logs
+  lr: 0.0001
+  manual_seed: 0
+  memory_efficient: true
+  mode: train
+  model_dir: ''
+  modify_activation: true
+  momentum: 0.9
+  n_classes: 128
+  name: ''
+  nb_layers: 4
+  net_type: real
+  optimizer: adam
+  padding: true
+  patch_size: 2
+  populate_mask: true
+  precision: 32
+  preprocess:
+    source:
+      asii_turb_trop_prob:
+        add_offset: 0
+        fill_value: 0
+        max_value: 100
+        scale_factor: 1
+      cma:
+        add_offset: 0
+        fill_value: 0
+        max_value: 1
+        scale_factor: 1
+      crr_intensity:
+        add_offset: 0
+        fill_value: 0
+        max_value: 500
+        scale_factor: &id002 !!python/object/apply:numpy.core.multiarray.scalar
+        - &id001 !!python/object/apply:numpy.dtype
+          args:
+          - f4
+          - 0
+          - 1
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 0
+        - !!binary |
+          zczMPQ==
+      temperature:
+        add_offset: 130
+        fill_value: 0
+        max_value: 35000
+        scale_factor: &id003 !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          CtcjPA==
+    target:
+      asii_turb_trop_prob:
+        add_offset: 0
+        fill_value: .nan
+        max_value: 100
+        scale_factor: 1
+      cma:
+        add_offset: 0
+        fill_value: .nan
+        max_value: 1
+        scale_factor: 1
+      crr_intensity:
+        add_offset: 0
+        fill_value: .nan
+        max_value: 500
+        scale_factor: &id004 !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          zczMPQ==
+      temperature:
+        add_offset: 130
+        fill_value: .nan
+        max_value: 35000
+        scale_factor: &id005 !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          CtcjPA==
+  products:
+    ASII:
+    - asii_turb_trop_prob
+    CMA:
+    - cma
+    CRR:
+    - crr_intensity
+    CTTH:
+    - temperature
+  region: R1
+  region_id: R1
+  seq_mode: sliding_window
+  sf: 16
+  sf_grp: 1
+  spatial_dim: !!python/tuple
+  - 256
+  - 256
+  stages: 3
+  static_paths:
+    e: /home/farhanakram/Alabi/Datasets/Weather4cast2021/statics/S_NWC_TOPO_MSG4_+000.0_Europe-VISIR.raw
+    l: /home/farhanakram/Alabi/Datasets/Weather4cast2021/statics/Navigation_of_S_NWC_CT_MSG4_Europe-VISIR_20201106T120000Z.nc
+  target_vars:
+  - temperature
+  - crr_intensity
+  - asii_turb_trop_prob
+  - cma
+  test_splits: /home/farhanakram/PycharmProjects/HypercomplexNetwork/Weather4cast2021/code_base/test_split.json
+  time_code: 20210630T224355
+  train_dims: 49794
+  train_region_id: R1_mse
+  train_splits: /home/farhanakram/PycharmProjects/HypercomplexNetwork/Weather4cast2021/code_base/splits.csv
+  up_mode: upconv
+  use_all_region: true
+  use_all_variables: false
+  use_cloud_type: false
+  use_group_norm: false
+  use_static: false
+  use_time_slot: false
+  versiondir: logs/ALL_real_swinencoder3d_688080/20210630T224355
+  weight_decay: 1.0e-06
+  weigths:
+    asii_turb_trop_prob: 0.25
+    cma: 0.25
+    crr_intensity: 0.25
+    temperature: 0.25
+  wf: 6
+  width: 256
+  workers: 8
+bins_to_predict: 32
+black_list_path: /home/farhanakram/PycharmProjects/HypercomplexNetwork/Weather4cast2021/code_base/blacklist.json
+collapse_time: false
+control_params:
+  use_all_variables: false
+  use_cloud_type: false
+  use_static: false
+  use_time_slot: false
+crop_in: null
+crop_out: null
+crop_static:
+  size: 256
+  x_start: 1850
+  y_start: 760
+data_path: /home/farhanakram/Alabi/Datasets/Weather4cast2021/w4c-core-stage-1/R1
+day_bins: 96
+depth: 4
+extra_data: ''
+height: 256
+input_vars:
+- temperature
+- crr_intensity
+- asii_turb_trop_prob
+- cma
+len_seq_in: 4
+len_seq_out: 32
+preprocess:
+  source:
+    asii_turb_trop_prob:
+      add_offset: 0
+      fill_value: 0
+      max_value: 100
+      scale_factor: 1
+    cma:
+      add_offset: 0
+      fill_value: 0
+      max_value: 1
+      scale_factor: 1
+    crr_intensity:
+      add_offset: 0
+      fill_value: 0
+      max_value: 500
+      scale_factor: *id002
+    temperature:
+      add_offset: 130
+      fill_value: 0
+      max_value: 35000
+      scale_factor: *id003
+  target:
+    asii_turb_trop_prob:
+      add_offset: 0
+      fill_value: .nan
+      max_value: 100
+      scale_factor: 1
+    cma:
+      add_offset: 0
+      fill_value: .nan
+      max_value: 1
+      scale_factor: 1
+    crr_intensity:
+      add_offset: 0
+      fill_value: .nan
+      max_value: 500
+      scale_factor: *id004
+    temperature:
+      add_offset: 130
+      fill_value: .nan
+      max_value: 35000
+      scale_factor: *id005
+products:
+  ASII:
+  - asii_turb_trop_prob
+  CMA:
+  - cma
+  CRR:
+  - crr_intensity
+  CTTH:
+  - temperature
+region_id: R1
+seq_mode: sliding_window
+spatial_dim: !!python/tuple
+- 256
+- 256
+static_paths:
+  e: /home/farhanakram/Alabi/Datasets/Weather4cast2021/statics/S_NWC_TOPO_MSG4_+000.0_Europe-VISIR.raw
+  l: /home/farhanakram/Alabi/Datasets/Weather4cast2021/statics/Navigation_of_S_NWC_CT_MSG4_Europe-VISIR_20201106T120000Z.nc
+target_vars:
+- temperature
+- crr_intensity
+- asii_turb_trop_prob
+- cma
+test_splits: /home/farhanakram/PycharmProjects/HypercomplexNetwork/Weather4cast2021/code_base/test_split.json
+train_region_id: R1_mse
+train_splits: /home/farhanakram/PycharmProjects/HypercomplexNetwork/Weather4cast2021/code_base/splits.csv
+use_all_region: true
+weigths:
+  asii_turb_trop_prob: 0.25
+  cma: 0.25
+  crr_intensity: 0.25
+  temperature: 0.25
+width: 256
