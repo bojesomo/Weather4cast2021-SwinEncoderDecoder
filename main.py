@@ -397,12 +397,12 @@ if __name__ == "__main__":
     python main.py --gpus 0 --region R1
 
     - a.2) fine tune a model from a checkpoint
-    python main.py --gpu_id 1 --region R1 --mode train --name ALL_real_swinencoder3d_688080 --time-code 20210630T224355 --initial-epoch 60
+    python main.py --gpu_id 1 --region R1 --mode train --name ALL_real_swinencoder3d_688080 --time-code 20210630T224355 --initial-epoch 58
     
     - b.1) evaluate an untrained model (with random weights)
     python main.py --gpus 0 --region R1 --mode test
 
     - b.2) evaluate a trained model from a checkpoint
-    python main.py --gpu_id 1 --region R1 --mode test --name ALL_real_swinencoder3d_688080 --time-code 20210630T224355 --initial-epoch 60
+    python main.py --gpu_id 1 --region R1 --mode test --name ALL_real_swinencoder3d_688080 --time-code 20210630T224355 --initial-epoch 58
     
     """
