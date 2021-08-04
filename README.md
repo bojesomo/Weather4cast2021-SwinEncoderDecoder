@@ -1,8 +1,8 @@
 # Weather4cast2021-SwinEncoderDecoder (AI4EX Team)
 
 ## Table of Content
-* [General Info] (#general-info)
-* [Requirements] (#requirements)
+* [General Info](#general-info)
+* [Requirements](#requirements)
 
 ## General Info
 The resipository contains the code and learned model parameters for our submision in Weather4cast2021 stage-1 competition.
