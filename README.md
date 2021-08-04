@@ -19,18 +19,18 @@ This resipository depends on the following packages availability
 ## Usage
 - a.1) train from scratch
     ```
-    python main.py --gpus 0 --region R1
+    python main.py --gpus 0 --use_all_region
     ```
 - a.2) fine tune a model from a checkpoint
     ```
-    python main.py --gpu_id 1 --region R1 --mode train --name ALL_real_swinencoder3d_688080 --time-code 20210630T224355 --initial-epoch 60```
+    python main.py --gpu_id 1 --use_all_region --mode train --name ALL_real_swinencoder3d_688080 --time-code 20210630T224355 --initial-epoch 58```
     
 - b.1) evaluate an untrained model (with random weights)
     ```
-    python main.py --gpus 0 --region R1 --mode test
+    python main.py --gpus 0 --use_all_region --mode test
     ```
-- b.2) evaluate a trained model from a checkpoint
+- b.2) evaluate a trained model from a checkpoint (submitted inference)
     ```
-    python main.py --gpu_id 1 --region R1 --mode test --name ALL_real_swinencoder3d_688080 --time-code 20210630T224355 --initial-epoch 60
+    python main.py --gpu_id 1 --use_all_region --mode test --name ALL_real_swinencoder3d_688080 --time-code 20210630T224355 --initial-epoch 58
     ```
     
