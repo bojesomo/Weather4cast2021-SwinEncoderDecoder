@@ -10,11 +10,11 @@ The resipository contains the code and learned model parameters for our submisio
 
 ## Requirements
 This resipository depends on the following packages availability
-*Pytorch Lightning
-*timm
-*torch_optimizer
-*pytorch_model_summary
-*einops
+- Pytorch Lightning
+- timm
+- torch_optimizer
+- pytorch_model_summary
+- einops
 
 ## Usage
 - a.1) train from scratch
