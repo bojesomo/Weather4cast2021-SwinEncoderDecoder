@@ -3,6 +3,7 @@
 ## Table of Content
 * [General Info](#general-info)
 * [Requirements](#requirements)
+* [Usage](#usage)
 
 ## General Info
 The resipository contains the code and learned model parameters for our submision in Weather4cast2021 stage-1 competition.
@@ -17,9 +18,9 @@ This resipository depends on the following packages availability
 
 ## Usage
 - a.1) train from scratch
-    python main.py --gpus 0 --region R1
+    $ python main.py --gpus 0 --region R1
 - a.2) fine tune a model from a checkpoint
-    python main.py --gpu_id 1 --region R1 --mode train --name ALL_real_swinencoder3d_688080 --time-code 20210630T224355 --initial-epoch 60
+    $python main.py --gpu_id 1 --region R1 --mode train --name ALL_real_swinencoder3d_688080 --time-code 20210630T224355 --initial-epoch 60
     
 - b.1) evaluate an untrained model (with random weights)
     python main.py --gpus 0 --region R1 --mode test
