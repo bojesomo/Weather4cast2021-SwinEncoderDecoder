@@ -1,8 +1,8 @@
 # Weather4cast2021-SwinEncoderDecoder (AI4EX Team)
 
 ## Table of Content
-*[General Info]
-*[Requirements]
+* [General Info]
+* [Requirements]
 
 ## General Info
 The resipository contains the code and learned model parameters for our submision in Weather4cast2021 stage-1 competition.
@@ -15,7 +15,7 @@ This resipository depends on the following packages availability
 *pytorch_model_summary
 *einops
 
-##Usage
+## Usage
 - a.1) train from scratch
     python main.py --gpus 0 --region R1
 - a.2) fine tune a model from a checkpoint
