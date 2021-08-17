@@ -23,7 +23,7 @@ This resipository depends on the following packages availability
 unzip folder.zip
 cd folder
 conda create --name swinencoder_env python=3.6
-conda activate swinencoder
+conda activate swinencoder_env
 conda install pytorch=1.9.0 cudatoolkit=10.2 -c pytorch
 pip install -r requirements.txt
 ```
