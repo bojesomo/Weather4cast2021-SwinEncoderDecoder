@@ -3,7 +3,9 @@
 ## Table of Content
 * [General Info](#general-info)
 * [Requirements](#requirements)
+* [Installation](#installation)
 * [Usage](#usage)
+* [Inference](#inference)
 
 ## General Info
 The resipository contains the code and learned model parameters for our submision in Weather4cast2021 stage-1 competition.
@@ -15,6 +17,16 @@ This resipository depends on the following packages availability
 - torch_optimizer
 - pytorch_model_summary
 - einops
+
+## Installation:
+```
+unzip folder.zip
+cd folder
+conda create --name swinencoder_env python=3.6
+conda activate swinencoder
+conda install pytorch=1.9.0 cudatoolkit=10.2 -c pytorch
+pip install -r requirements.txt
+```
 
 ## Usage
 - a.1) train from scratch
@@ -33,4 +45,13 @@ This resipository depends on the following packages availability
     ```
     python main.py --gpu_id 1 --use_all_region --mode test --name ALL_real_swinencoder3d_688080 --time-code 20210630T224355 --initial-epoch 58
     ```
-    
+ 
+## Inference
+To generate predictions using our trained model
+```
+R=R1
+INPUT_PATH=../data
+WEIGHTS=logs/ALL_real_swinencoder3d_688080
+OUT_PATH=.
+python inference.py -d $INPUT_PATH -r $R -w $WEIGHTS -o $OUT_PATH -g 1
+```
